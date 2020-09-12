@@ -44,8 +44,7 @@ const Bloom = (size, functions) => {
     return { add, test }
 }
 
-function OptimalBloom(max_members, error_probability)
-{
+const OptimalBloom = (max_members, error_probability) => {
     var size = -(max_members * Math.log(error_probability)) / (Math.LN2 * Math.LN2);
     var count = (size / max_members) * Math.LN2;
 
